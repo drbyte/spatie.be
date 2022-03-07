@@ -183,3 +183,7 @@ Route::post('testing-laravel', [TestingLaravelController::class, 'subscribe']);
 
 Route::get('uses', [UsesController::class, 'index'])->name('uses');
 
+
+Route::prefix('sponsors')->group(function () {
+    Route::view('longhorn-php', 'front.pages.sponsors.longhorn-php')->name('sponsors.longhorn-php');
+});
